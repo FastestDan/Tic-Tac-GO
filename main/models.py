@@ -3,7 +3,7 @@ from django.db import models
 
 class Lobby(models.Model):
     name = models.CharField(max_length=200)
-    guest = models.CharField(max_length=200)
+    guest = models.CharField(max_length=200, blank=True)
     objects = models.Manager()
 
     def __str__(self):
